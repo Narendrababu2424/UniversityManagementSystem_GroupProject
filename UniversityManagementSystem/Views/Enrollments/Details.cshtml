@@ -1,0 +1,12 @@
+@model UniversityManagementSystem.Models.Enrollment
+
+<h2>Enrollment Details</h2>
+
+<div>
+    <p><strong>Student:</strong> @Model.Student.FirstName @Model.Student.LastName</p>
+    <p><strong>Course:</strong> @Model.Course.Title</p>
+    <p><strong>Grade:</strong> @Model.Grade</p>
+    <p><strong>Date:</strong> @Model.EnrollmentDate.ToShortDateString()</p>
+</div>
+
+<a asp-action="Index">Back to List</a>

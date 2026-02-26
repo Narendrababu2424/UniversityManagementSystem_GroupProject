@@ -1,0 +1,31 @@
+@model UniversityManagementSystem.ViewModels.EnrollmentViewModel
+
+<h2>Edit Enrollment</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label>Student</label>
+        <select asp-for="StudentId" asp-items="Model.Students"></select>
+    </div>
+
+    <div>
+        <label>Course</label>
+        <select asp-for="CourseId" asp-items="Model.Courses"></select>
+    </div>
+
+    <div>
+        <label>Grade</label>
+        <input asp-for="Grade" />
+    </div>
+
+    <div>
+        <label>Date</label>
+        <input asp-for="EnrollmentDate" type="date" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+<a asp-action="Index">Back to List</a>
