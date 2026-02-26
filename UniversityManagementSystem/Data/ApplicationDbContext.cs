@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using UniversityManagementSystem.Models;
 
 namespace UniversityManagementSystem.Data
@@ -33,5 +33,6 @@ namespace UniversityManagementSystem.Data
                 .HasForeignKey(e => e.CourseId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
+        public DbSet<UniversityManagementSystem.Models.CourseMark> CourseMark { get; set; } = default!;
     }
 }
